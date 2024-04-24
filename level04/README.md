@@ -1,3 +1,5 @@
+# Level04
+
 This binary will call fork() to create a child process. This child process will wait for an input using gets(). We're getting used to overflow it, let's try to see if we can overflow to any valuable register (looking at you, EIP). First of all we need to follow the child process in gdb :
 
     (gdb) set follow-fork-mode child

@@ -1,3 +1,5 @@
+# Level00
+
 That's an easy one. Looking at the source file, we can see that the binary waits for a password using scanf. If the provided password is correct, a shell is run. Decompiling the code, we can see that the password is hard coded and is equal to 5276
 
     level00@OverRide:~$ ./level00 123

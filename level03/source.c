@@ -1,6 +1,6 @@
 //----- (08048660) --------------------------------------------------------
 // positive sp value has been detected, the output may be wrong!
-int __cdecl decrypt(char a1)
+int decrypt(char a1)
 {
   unsigned int i; // [esp+20h] [ebp-28h]
   unsigned int v3; // [esp+24h] [ebp-24h]
@@ -18,7 +18,7 @@ int __cdecl decrypt(char a1)
 // 8048746: positive sp value 4 has been found
 
 //----- (08048747) --------------------------------------------------------
-int __cdecl test(int a1, int a2)
+int test(int a1, int a2)
 {
   int result; // eax
   char v3; // al

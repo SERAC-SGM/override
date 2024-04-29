@@ -14,7 +14,7 @@ Running this binary, we get :
 
 	Input command: 
 
-We can store one numbe at a time in a given index. There is a security that prevents using any index divisible by 3 though, so index 0, 3, 6, etc..., are unwritable. Also, we can't access environment variables, so we won't be able to store a payload there. The most obvious thing to do is a ret2libc, where we overflow the stack return address with another function, in our case a call to system with /bin/sh as argument.
+We can store one number at a time in a given index. There is a security that prevents using any index divisible by 3 though, so index 0, 3, 6, etc..., are unwritable. Also, we can't access environment variables, so we won't be able to store a payload there. The most obvious thing to do is a ret2libc, where we overflow the stack return address with another function, in our case a call to system with /bin/sh as argument.
 
 First, we need to know where we can overwrite the return address. First of all, let's find it by setting a breakpoint at the end of our program and looking at eip :
 

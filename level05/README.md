@@ -1,6 +1,6 @@
 # Level05
 
-Looking at the source code, we have a very simple binary that will print a buffer (in an unsecured manner) that gets filled via a call to fgets. There is a XOR between 32 and each character if they're in uppercase, that will convert them to lowecase. A very simple trick we could do would be very similar to [rainfall level5](https://github.com/SERAC-SGM/rainfall-42/tree/main/level05) :
+Looking at the source code, we have a very simple binary that will print a buffer (in an unsecured manner) that gets filled via a call to fgets. There is a XOR between 32 and each character if they're in uppercase, that will convert them to lowercase. A very simple trick we could do would be very similar to [rainfall level5](https://github.com/SERAC-SGM/rainfall-42/tree/main/level05) :
 
 - We craft a payload that will show the next password, and store it in an env variable
 - We change the address of exit in the global offset table (got) by the address of the env variable using a format string attack

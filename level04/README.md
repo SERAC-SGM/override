@@ -51,7 +51,7 @@ Let's take an address that will land on one of the NOP operations, after SHELLCO
     Give me some shellcode, k
     no exec() for you
 
-After diggning into the source code for a bit, we can see a call to ptrace that looks for an execve call in the parent process. If execve is detected, the parent will kill the child, and write "no exec() for you".
+After digging into the source code for a bit, we can see a call to ptrace that looks for an execve call in the parent process. If execve is detected, the parent will kill the child, and write "no exec() for you".
 
 So we can't use execve, but nothing prevents us from using read and write to directly write the password to stdout instead of spawning a shell. Let's craft a new shellcode that does that :
 

